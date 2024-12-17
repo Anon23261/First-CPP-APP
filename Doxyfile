@@ -1,0 +1,44 @@
+PROJECT_NAME           = "Modern C++ Calculator"
+PROJECT_NUMBER         = 1.0.0
+PROJECT_BRIEF         = "A professional-grade calculator implementation in modern C++"
+OUTPUT_DIRECTORY      = docs
+CREATE_SUBDIRS        = YES
+OPTIMIZE_OUTPUT_FOR_C = YES
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_PACKAGE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+GENERATE_RTF           = NO
+GENERATE_MAN           = NO
+GENERATE_XML          = NO
+
+INPUT                  = src
+INPUT_ENCODING         = UTF-8
+FILE_PATTERNS          = *.cpp *.h
+RECURSIVE              = YES
+
+EXCLUDE_PATTERNS       = */build/* */test/*
+
+HAVE_DOT               = YES
+UML_LOOK              = YES
+CALL_GRAPH            = YES
+CALLER_GRAPH          = YES
+
+HTML_DYNAMIC_SECTIONS  = YES
+INTERACTIVE_SVG       = YES
+DOT_IMAGE_FORMAT      = svg
+HTML_COLORSTYLE_HUE   = 220
+HTML_COLORSTYLE_SAT   = 100
+HTML_COLORSTYLE_GAMMA = 80
+
+GENERATE_TREEVIEW      = YES
+TREEVIEW_WIDTH        = 250
+
+FORMULA_FONTSIZE      = 10
+
+USE_MDFILE_AS_MAINPAGE = README.md
