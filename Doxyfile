@@ -32,7 +32,7 @@ CALLER_GRAPH          = YES
 
 HTML_DOCTYPE         = <!DOCTYPE html>
 HTML_FILE_EXTENSION  = .html
-HTML_HEADER         =
+HTML_HEADER         = docs/header.html
 HTML_FOOTER         =
 HTML_EXTRA_STYLESHEET =
 HTML_EXTRA_FILES    =
