@@ -4,6 +4,7 @@ PROJECT_BRIEF         = "A professional-grade calculator implementation in moder
 OUTPUT_DIRECTORY      = docs
 CREATE_SUBDIRS        = YES
 OPTIMIZE_OUTPUT_FOR_C = YES
+PROJECT_LOGO           = docs/calculator-logo.txt
 
 EXTRACT_ALL            = YES
 EXTRACT_PRIVATE        = YES
