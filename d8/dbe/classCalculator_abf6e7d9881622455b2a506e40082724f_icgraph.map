@@ -1,0 +1,7 @@
+<map id="Calculator::degreesToRadians" name="Calculator::degreesToRadians">
+<area shape="rect" id="node1" title="Convert between degrees and radians." alt="" coords="275,56,489,83"/>
+<area shape="rect" id="node2" href="$d8/dbe/classCalculator.html#a37c0d80307a75c1b9425d675407e7914" title="Calculate cosine in radians." alt="" coords="108,5,227,32"/>
+<area shape="rect" id="node4" href="$d8/dbe/classCalculator.html#a3e9c9f13f93ce365c30c8e6387718e91" title="Calculate sine in radians." alt="" coords="110,56,225,83"/>
+<area shape="rect" id="node5" href="$d8/dbe/classCalculator.html#a4180b40722d78518ee1d3ba8ad58f632" title="Calculate tangent in radians." alt="" coords="109,107,226,133"/>
+<area shape="rect" id="node3" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,56,60,83"/>
+</map>

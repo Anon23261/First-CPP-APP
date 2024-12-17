@@ -1,0 +1,5 @@
+<map id="Calculator::memoryRecall" name="Calculator::memoryRecall">
+<area shape="rect" id="node1" title="Recall value from memory." alt="" coords="5,31,196,57"/>
+<area shape="rect" id="node2" href="$d8/dbe/classCalculator.html#add8a2ef3e8af88790326ad83b1cd541a" title="Add entry to calculation history." alt="" coords="249,5,431,32"/>
+<area shape="rect" id="node3" href="$d8/dbe/classCalculator.html#a764f3d664f2401435b3300dcc043e139" title="Format number for display." alt="" coords="244,56,436,83"/>
+</map>

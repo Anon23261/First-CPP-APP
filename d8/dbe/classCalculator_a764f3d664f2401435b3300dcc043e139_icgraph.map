@@ -1,0 +1,20 @@
+<map id="Calculator::formatNumber" name="Calculator::formatNumber">
+<area shape="rect" id="node1" title="Format number for display." alt="" coords="793,360,985,387"/>
+<area shape="rect" id="node2" href="$d8/dbe/classCalculator.html#a54ca827c4b408c795576d48503eee6aa" title=" " alt="" coords="610,5,730,32"/>
+<area shape="rect" id="node3" href="$d8/dbe/classCalculator.html#a9e304d79b58ced8a6e71c5d5dea7c1b7" title=" " alt="" coords="377,183,531,209"/>
+<area shape="rect" id="node6" href="$d8/dbe/classCalculator.html#a37c0d80307a75c1b9425d675407e7914" title="Calculate cosine in radians." alt="" coords="395,309,513,336"/>
+<area shape="rect" id="node7" href="$d8/dbe/classCalculator.html#a7da73cdbcc434a4f28d614f7f036b74a" title=" " alt="" coords="602,107,738,133"/>
+<area shape="rect" id="node8" href="$d8/dbe/classCalculator.html#a5e4112cc094703343ecd51baf48a4549" title="Calculate the natural logarithm." alt="" coords="157,360,265,387"/>
+<area shape="rect" id="node9" href="$d8/dbe/classCalculator.html#a4e60d98521a5b1e5302980919d1fcc9c" title="Add current value to memory." alt="" coords="366,411,542,437"/>
+<area shape="rect" id="node10" href="$d8/dbe/classCalculator.html#a4ac1ee75a8995fdec32319722dac2ee8" title="Recall value from memory." alt="" coords="115,461,306,488"/>
+<area shape="rect" id="node11" href="$d8/dbe/classCalculator.html#af623864b6873f187d41b22440e1e25d3" title="Store current value in memory." alt="" coords="361,512,547,539"/>
+<area shape="rect" id="node12" href="$d8/dbe/classCalculator.html#a81eb175a92c69c98dd2a83fb75edff2b" title="Subtract current value from memory." alt="" coords="108,563,313,589"/>
+<area shape="rect" id="node13" href="$d8/dbe/classCalculator.html#a319373a53b4e84f92c207e4f7bb9dfce" title=" " alt="" coords="595,157,745,184"/>
+<area shape="rect" id="node14" href="$d8/dbe/classCalculator.html#a6daef00d57c1e9cdcefcf017020b0cb2" title="Calculate the power of a number." alt="" coords="602,208,738,235"/>
+<area shape="rect" id="node15" href="$d8/dbe/classCalculator.html#a3e9c9f13f93ce365c30c8e6387718e91" title="Calculate sine in radians." alt="" coords="397,613,511,640"/>
+<area shape="rect" id="node16" href="$d8/dbe/classCalculator.html#a1264d26247e77ad966aea7371c45c314" title="Calculate the square root of a number." alt="" coords="150,664,271,691"/>
+<area shape="rect" id="node17" href="$d8/dbe/classCalculator.html#ad8a28a8b990342d4bfde65ab85ec7596" title=" " alt="" coords="595,259,745,285"/>
+<area shape="rect" id="node18" href="$d8/dbe/classCalculator.html#a4180b40722d78518ee1d3ba8ad58f632" title="Calculate tangent in radians." alt="" coords="395,715,513,741"/>
+<area shape="rect" id="node4" href="$df/d0a/main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,461,60,488"/>
+<area shape="rect" id="node5" href="$d8/dbe/classCalculator.html#aecc0629ec1d4ce2c6fceb9b57c576386" title=" " alt="" coords="121,245,301,272"/>
+</map>

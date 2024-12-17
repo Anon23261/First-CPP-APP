@@ -1,0 +1,6 @@
+<map id="Calculator::cos" name="Calculator::cos">
+<area shape="rect" id="node1" title="Calculate cosine in radians." alt="" coords="5,56,124,83"/>
+<area shape="rect" id="node2" href="$d8/dbe/classCalculator.html#add8a2ef3e8af88790326ad83b1cd541a" title="Add entry to calculation history." alt="" coords="189,5,370,32"/>
+<area shape="rect" id="node3" href="$d8/dbe/classCalculator.html#abf6e7d9881622455b2a506e40082724f" title="Convert between degrees and radians." alt="" coords="172,56,387,83"/>
+<area shape="rect" id="node4" href="$d8/dbe/classCalculator.html#a764f3d664f2401435b3300dcc043e139" title="Format number for display." alt="" coords="183,107,375,133"/>
+</map>

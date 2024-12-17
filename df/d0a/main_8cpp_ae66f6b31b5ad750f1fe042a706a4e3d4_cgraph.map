@@ -1,0 +1,29 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title=" " alt="" coords="5,557,60,583"/>
+<area shape="rect" id="node2" href="$d8/dbe/classCalculator.html#a8fd7d02f69969809b14c670bf43c07d3" title=" " alt="" coords="108,151,304,178"/>
+<area shape="rect" id="node3" href="$d8/dbe/classCalculator.html#a9e304d79b58ced8a6e71c5d5dea7c1b7" title=" " alt="" coords="367,177,522,203"/>
+<area shape="rect" id="node11" href="$d8/dbe/classCalculator.html#ac4a03e4c7d48d4d9bbb3d1c3708dd01f" title=" " alt="" coords="142,810,270,837"/>
+<area shape="rect" id="node12" href="$d8/dbe/classCalculator.html#a37c0d80307a75c1b9425d675407e7914" title="Calculate cosine in radians." alt="" coords="629,607,747,634"/>
+<area shape="rect" id="node14" href="$df/d0a/main_8cpp.html#a654e8f4515d95090254e0d156d3007e5" title=" " alt="" coords="148,861,264,887"/>
+<area shape="rect" id="node16" href="$df/d0a/main_8cpp.html#a59c2926dd9b0968badf463aaf4f91422" title=" " alt="" coords="153,911,259,938"/>
+<area shape="rect" id="node17" href="$d8/dbe/classCalculator.html#a6643e5d1f7630f7c240f8828deb6e6f3" title=" " alt="" coords="109,962,303,989"/>
+<area shape="rect" id="node18" href="$d8/dbe/classCalculator.html#a5e4112cc094703343ecd51baf48a4549" title="Calculate the natural logarithm." alt="" coords="634,506,742,533"/>
+<area shape="rect" id="node19" href="$d8/dbe/classCalculator.html#a4e60d98521a5b1e5302980919d1fcc9c" title="Add current value to memory." alt="" coords="600,557,776,583"/>
+<area shape="rect" id="node20" href="$d8/dbe/classCalculator.html#a7a698a9016330e469b73d97856de275f" title="Clear memory." alt="" coords="352,658,537,685"/>
+<area shape="rect" id="node21" href="$d8/dbe/classCalculator.html#a4ac1ee75a8995fdec32319722dac2ee8" title="Recall value from memory." alt="" coords="593,303,783,330"/>
+<area shape="rect" id="node22" href="$d8/dbe/classCalculator.html#af623864b6873f187d41b22440e1e25d3" title="Store current value in memory." alt="" coords="595,354,781,381"/>
+<area shape="rect" id="node23" href="$d8/dbe/classCalculator.html#a81eb175a92c69c98dd2a83fb75edff2b" title="Subtract current value from memory." alt="" coords="585,405,791,431"/>
+<area shape="rect" id="node24" href="$d8/dbe/classCalculator.html#aecc0629ec1d4ce2c6fceb9b57c576386" title=" " alt="" coords="116,253,296,279"/>
+<area shape="rect" id="node25" href="$d8/dbe/classCalculator.html#a3e9c9f13f93ce365c30c8e6387718e91" title="Calculate sine in radians." alt="" coords="631,709,745,735"/>
+<area shape="rect" id="node26" href="$d8/dbe/classCalculator.html#a1264d26247e77ad966aea7371c45c314" title="Calculate the square root of a number." alt="" coords="627,455,749,482"/>
+<area shape="rect" id="node27" href="$d8/dbe/classCalculator.html#a4180b40722d78518ee1d3ba8ad58f632" title="Calculate tangent in radians." alt="" coords="629,759,747,786"/>
+<area shape="rect" id="node4" href="$d8/dbe/classCalculator.html#a54ca827c4b408c795576d48503eee6aa" title=" " alt="" coords="628,253,748,279"/>
+<area shape="rect" id="node6" href="$d8/dbe/classCalculator.html#a764f3d664f2401435b3300dcc043e139" title="Format number for display." alt="" coords="850,354,1042,381"/>
+<area shape="rect" id="node7" href="$d8/dbe/classCalculator.html#a7da73cdbcc434a4f28d614f7f036b74a" title=" " alt="" coords="620,50,756,77"/>
+<area shape="rect" id="node8" href="$d8/dbe/classCalculator.html#a319373a53b4e84f92c207e4f7bb9dfce" title=" " alt="" coords="613,101,763,127"/>
+<area shape="rect" id="node9" href="$d8/dbe/classCalculator.html#a6daef00d57c1e9cdcefcf017020b0cb2" title="Calculate the power of a number." alt="" coords="620,151,756,178"/>
+<area shape="rect" id="node10" href="$d8/dbe/classCalculator.html#ad8a28a8b990342d4bfde65ab85ec7596" title=" " alt="" coords="613,202,763,229"/>
+<area shape="rect" id="node5" href="$d8/dbe/classCalculator.html#add8a2ef3e8af88790326ad83b1cd541a" title="Add entry to calculation history." alt="" coords="855,405,1037,431"/>
+<area shape="rect" id="node13" href="$d8/dbe/classCalculator.html#abf6e7d9881622455b2a506e40082724f" title="Convert between degrees and radians." alt="" coords="839,709,1053,735"/>
+<area shape="rect" id="node15" href="$d8/dbe/classCalculator.html#af21e05c5740767607b06bf980d3edfcd" title="Get calculation history." alt="" coords="363,861,527,887"/>
+</map>
