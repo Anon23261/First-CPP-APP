@@ -22,7 +22,7 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="../../db/d2b/calculator_8h.html" target="_top" xlink:title="Advanced Calculator Class Implementation.">
-<polygon fill="white" stroke="black" points="98,-56.5 98,-75.5 172,-75.5 172,-56.5 98,-56.5"/>
+<polygon fill="white" stroke="black" points="98.5,-56.5 98.5,-75.5 171.5,-75.5 171.5,-56.5 98.5,-56.5"/>
 <text text-anchor="middle" x="135" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">calculator.h</text>
 </a>
 </g>
@@ -45,8 +45,8 @@
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge10" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M181.07,-112.43C153.92,-105.34 117.59,-93.55 89,-76 67.76,-62.96 47.85,-42.12 35.35,-27.57"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="37.98,-25.26 28.89,-19.83 32.61,-29.75 37.98,-25.26"/>
+<path fill="none" stroke="midnightblue" d="M181.98,-112.46C155,-105.33 118.64,-93.48 90,-76 68.56,-62.91 48.34,-42.09 35.61,-27.55"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="38.17,-25.16 29.02,-19.82 32.84,-29.7 38.17,-25.16"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">

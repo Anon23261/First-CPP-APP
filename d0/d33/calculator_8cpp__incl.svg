@@ -59,7 +59,7 @@ var sectionId = 'dynsection-0';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="228.5,-112.5 228.5,-131.5 330.5,-131.5 330.5,-112.5 228.5,-112.5"/>
+<polygon fill="#bfbfbf" stroke="black" points="229,-112.5 229,-131.5 330,-131.5 330,-112.5 229,-112.5"/>
 <text text-anchor="middle" x="279.5" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/calculator.cpp</text>
 </a>
 </g>
@@ -68,7 +68,7 @@ var sectionId = 'dynsection-0';
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="../../db/d2b/calculator_8h.html" target="_top" xlink:title="Advanced Calculator Class Implementation.">
-<polygon fill="white" stroke="black" points="119.5,-56.5 119.5,-75.5 193.5,-75.5 193.5,-56.5 119.5,-56.5"/>
+<polygon fill="white" stroke="black" points="120,-56.5 120,-75.5 193,-75.5 193,-56.5 120,-56.5"/>
 <text text-anchor="middle" x="156.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">calculator.h</text>
 </a>
 </g>
@@ -91,8 +91,8 @@ var sectionId = 'dynsection-0';
 <!-- Node1&#45;&gt;Node4 -->
 <g id="edge12" class="edge">
 <title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M228.17,-112.62C193.71,-105.74 147.94,-94.13 110.5,-76 83.91,-63.12 57.28,-41.66 40.62,-26.94"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="42.63,-24.05 32.86,-19.94 37.94,-29.24 42.63,-24.05"/>
+<path fill="none" stroke="midnightblue" d="M228.88,-112.58C194.59,-105.66 148.9,-94.02 111.5,-76 84.69,-63.08 57.73,-41.63 40.85,-26.93"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="42.79,-23.97 33,-19.93 38.14,-29.2 42.79,-23.97"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">

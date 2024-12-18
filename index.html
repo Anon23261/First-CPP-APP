@@ -1,473 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Modern C++ Calculator | OS Development Portfolio</title>
-    <link href="tabs.css" rel="stylesheet" type="text/css"/>
-    <link href="doxygen.css" rel="stylesheet" type="text/css"/>
-    <link href="navtree.css" rel="stylesheet" type="text/css"/>
-    <link href="search/search.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
-    <script type="text/javascript">
-        window.jQuery = $;
-        window.$ = $;
-    </script>
-    <script type="text/javascript" src="dynsections.js"></script>
-    <script type="text/javascript" src="resize.js"></script>
-    <script type="text/javascript" src="navtreedata.js"></script>
-    <script type="text/javascript" src="navtree.js"></script>
-    <script type="text/javascript" src="search/searchdata.js"></script>
-    <script type="text/javascript" src="search/search.js"></script>
-    <style>
-        :root {
-            --bg-color: #1e1e1e;
-            --text-color: #d4d4d4;
-            --primary-color: #569cd6;
-            --secondary-color: #4ec9b0;
-            --accent-color: #c586c0;
-            --comment-color: #6a9955;
-            --keyword-color: #c586c0;
-            --function-color: #dcdcaa;
-            --number-color: #b5cea8;
-            --string-color: #ce9178;
-            --error-color: #f44747;
-            --warning-color: #ff8800;
-        }
-        
-        /* Hero Section */
-        .hero-section {
-            background: linear-gradient(135deg, #2b2b2b 0%, #1e1e1e 100%);
-            padding: 4rem 2rem;
-            text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            margin-top: 0;
-        }
-
-        .hero-title {
-            font-size: 3.5em;
-            color: var(--primary-color);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .hero-subtitle {
-            font-size: 1.8em;
-            color: var(--secondary-color);
-            margin-bottom: 2rem;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .hero-description {
-            font-size: 1.2em;
-            color: var(--text-color);
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .hero-badges {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
-
-        .badge {
-            background: #333;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            color: var(--text-color);
-            font-family: 'JetBrains Mono', monospace;
-            border: 1px solid var(--primary-color);
-        }
-
-        .badge-primary {
-            background: var(--primary-color);
-            color: var(--bg-color);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            background: var(--bg-color);
-        }
-
-        code, pre {
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        #titlearea {
-            background: #252526;
-            color: var(--text-color);
-            padding: 2rem;
-            border-bottom: 1px solid #333;
-        }
-
-        #projectname {
-            font-size: 2.5em;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        #projectbrief {
-            font-size: 1.2em;
-            color: var(--secondary-color);
-        }
-
-        .header {
-            background: #252526;
-            padding: 2rem;
-            margin: 2rem;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-
-        .title {
-            color: var(--primary-color);
-            font-size: 1.8em;
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .highlight-box {
-            background: #252526;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .skill-item {
-            background: #2d2d2d;
-            padding: 1rem;
-            border-radius: 6px;
-            text-align: center;
-            transition: transform 0.2s;
-            border: 1px solid #404040;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-2px);
-            border-color: var(--primary-color);
-            background: #333;
-        }
-
-        .skill-item h3 {
-            color: var(--function-color);
-            margin: 0.5rem 0;
-        }
-
-        .skill-item p {
-            color: var(--comment-color);
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background: var(--secondary-color);
-            color: var(--bg-color);
-            text-decoration: none;
-            border-radius: 4px;
-            transition: all 0.2s;
-            font-weight: 500;
-            margin-top: 1rem;
-        }
-
-        .cta-button:hover {
-            background: var(--primary-color);
-            transform: translateY(-1px);
-        }
-
-        #side-nav {
-            background: #252526;
-            border-radius: 8px;
-            margin: 1rem;
-            border: 1px solid #333;
-        }
-
-        /* Code-like elements */
-        .code-comment {
-            color: var(--comment-color);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .code-keyword {
-            color: var(--keyword-color);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .code-function {
-            color: var(--function-color);
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        /* Terminal-like elements */
-        .terminal-box {
-            background: #1e1e1e;
-            padding: 1rem;
-            border-radius: 4px;
-            border: 1px solid #333;
-            margin: 1rem 0;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .terminal-prompt::before {
-            content: "$ ";
-            color: var(--secondary-color);
-        }
-
-        /* Links */
-        a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        a:hover {
-            color: var(--secondary-color);
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #1e1e1e;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #424242;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #4f4f4f;
-        }
-
-        /* Update navigation styles */
-        .top-nav {
-            background: #252526;
-            border-bottom: 1px solid #333;
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .nav-link {
-            color: var(--text-color);
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.2s;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .nav-link:hover {
-            background: #333;
-            color: var(--primary-color);
-            transform: translateY(-1px);
-        }
-
-        .nav-link.active {
-            background: var(--primary-color);
-            color: var(--bg-color);
-        }
-
-        .nav-link svg {
-            width: 16px;
-            height: 16px;
-            fill: currentColor;
-        }
-
-        /* Hide the default Doxygen navigation */
-        #nav-tree, #nav-path {
-            display: none !important;
-        }
-
-        #side-nav {
-            display: none !important;
-        }
-    </style>
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // Ensure jQuery UI is loaded
-            if (typeof jQuery.ui === 'undefined') {
-                console.error('jQuery UI is not loaded');
-                return;
-            }
-            
-            // Initialize navigation tree
-            initNavTree('index.html','');
-            
-            // Initialize resizable elements
-            try {
-                if (typeof $.fn.resizable === 'function') {
-                    initResizable();
-                } else {
-                    console.error('jQuery UI resizable is not available');
-                }
-            } catch (e) {
-                console.error('Error initializing resizable:', e);
-            }
-        });
-    </script>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Modern C++ Calculator: Main Page</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <div class="top-nav">
-        <a href="index.html" class="nav-link active">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-            </svg>
-            Home
-        </a>
-        <a href="d8/dbe/classCalculator.html" class="nav-link">
-            <svg viewBox="0 0 24 24">
-                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-            </svg>
-            Documentation
-        </a>
-        <a href="files.html" class="nav-link">
-            <svg viewBox="0 0 24 24">
-                <path d="M20 6h-8l-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V6h5.17l2 2H20v10z"/>
-            </svg>
-            Files
-        </a>
-        <a href="annotated.html" class="nav-link">
-            <svg viewBox="0 0 24 24">
-                <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
-            </svg>
-            Classes
-        </a>
-        <a href="https://github.com/Anon23261/First-CPP-APP/tree/main/src" class="nav-link" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/>
-            </svg>
-            Source Code
-        </a>
-        <a href="https://github.com/Anon23261/First-CPP-APP" class="nav-link" target="_blank">
-            <svg viewBox="0 0 24 24">
-                <path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
-            </svg>
-            GitHub
-        </a>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="calculator-logo.txt"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Modern C++ Calculator
+   &#160;<span id="projectnumber">1.0.0</span>
+   </div>
+   <div id="projectbrief">A professional-grade calculator implementation in modern C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
-    <div id="top">
-        <div class="hero-section">
-            <div class="hero-title">
-                Modern C++ Calculator
-                <span style="font-size: 0.5em; color: var(--accent-color);">v1.0</span>
-            </div>
-            <div class="hero-subtitle">Advanced System-Level Development</div>
-            <div class="hero-description">
-                A professional-grade scientific calculator showcasing modern C++ features, 
-                system-level optimization, and robust architecture design.
-            </div>
-            <div class="hero-badges">
-                <span class="badge badge-primary">C++17/20</span>
-                <span class="badge">System Programming</span>
-                <span class="badge">Performance Optimized</span>
-                <span class="badge">Memory Safe</span>
-            </div>
-        </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
 
-        <div id="titlearea">
-            <div id="projectname">Modern C++ Calculator
-                <span class="code-keyword">v1.0</span>
-            </div>
-            <div id="projectbrief">System-Level Development & OS Integration</div>
-        </div>
-        <div id="main-nav"></div>
-        <div id="doc-content">
-            <div class="header">
-                <div class="headertitle">
-                    <div class="title">OS Development Portfolio</div>
-                </div>
-            </div>
-            <div class="contents">
-                <div class="textblock">
-                    <div class="highlight-box">
-                        <h2><span class="code-function">Project</span><span class="code-keyword">::</span>Highlights</h2>
-                        <p>This modern C++ calculator demonstrates expertise in system-level programming and OS integration. Built with performance and reliability in mind, it showcases low-level optimization techniques and robust error handling.</p>
-                        <div class="terminal-box">
-                            <div class="terminal-prompt">git clone https://github.com/Anon23261/First-CPP-APP.git</div>
-                        </div>
-                    </div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
 
-                    <div class="highlight-box">
-                        <h2><span class="code-function">Technical</span><span class="code-keyword">::</span>Skills</h2>
-                        <div class="skills-grid">
-                            <div class="skill-item">
-                                <h3>System Programming</h3>
-                                <p>Low-level C++ & OS APIs</p>
-                            </div>
-                            <div class="skill-item">
-                                <h3>Memory Management</h3>
-                                <p>RAII & Smart Pointers</p>
-                            </div>
-                            <div class="skill-item">
-                                <h3>Concurrency</h3>
-                                <p>Thread Safety & Async</p>
-                            </div>
-                            <div class="skill-item">
-                                <h3>Performance</h3>
-                                <p>Optimization & Profiling</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="highlight-box">
-                        <h2><span class="code-function">Documentation</span><span class="code-keyword">::</span>Links</h2>
-                        <ul>
-                            <li><span class="code-comment">// Core Implementation</span><br>
-                                <a href="d8/dbe/classCalculator.html">Calculator Class Documentation</a></li>
-                            <li><span class="code-comment">// Source Analysis</span><br>
-                                <a href="files.html">Source Files</a></li>
-                            <li><span class="code-comment">// API Reference</span><br>
-                                <a href="annotated.html">Class List</a></li>
-                        </ul>
-                        <a href="https://github.com/Anon23261/First-CPP-APP" class="cta-button">View Source on GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="side-nav" class="ui-resizable side-nav-resizable">
-        <div id="nav-tree">
-            <div id="nav-tree-contents">
-                <div id="nav-sync" class="sync"></div>
-            </div>
-        </div>
-    </div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">Modern C++ Calculator Documentation</div>  </div>
+</div><!--header-->
+<div class="contents">
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated on Wed Dec 18 2024 00:14:01 for Modern C++ Calculator by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>
