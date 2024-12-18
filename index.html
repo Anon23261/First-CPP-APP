@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Modern C++ Calculator | Professional Portfolio</title>
+    <title>Modern C++ Calculator | OS Development Portfolio</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <link href="doxygen.css" rel="stylesheet" type="text/css"/>
     <link href="navtree.css" rel="stylesheet" type="text/css"/>
     <link href="search/search.css" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
     <script type="text/javascript" src="resize.js"></script>
     <script type="text/javascript" src="navtreedata.js"></script>
@@ -19,48 +21,58 @@
     <script type="text/javascript" src="search/search.js"></script>
     <style>
         :root {
-            --primary-color: #2962ff;
-            --secondary-color: #0039cb;
-            --accent-color: #768fff;
-            --text-color: #333;
-            --light-bg: #f5f5f5;
-            --success-color: #00c853;
+            --bg-color: #1e1e1e;
+            --text-color: #d4d4d4;
+            --primary-color: #569cd6;
+            --secondary-color: #4ec9b0;
+            --accent-color: #c586c0;
+            --comment-color: #6a9955;
+            --keyword-color: #c586c0;
+            --function-color: #dcdcaa;
+            --number-color: #b5cea8;
+            --string-color: #ce9178;
+            --error-color: #f44747;
+            --warning-color: #ff8800;
         }
         
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
             color: var(--text-color);
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+            background: var(--bg-color);
+        }
+
+        code, pre {
+            font-family: 'JetBrains Mono', monospace;
         }
 
         #titlearea {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
+            background: #252526;
+            color: var(--text-color);
             padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #333;
         }
 
         #projectname {
             font-size: 2.5em;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            color: var(--primary-color);
         }
 
         #projectbrief {
             font-size: 1.2em;
-            color: rgba(255, 255, 255, 0.9);
+            color: var(--secondary-color);
         }
 
         .header {
-            background: white;
+            background: #252526;
             padding: 2rem;
             margin: 2rem;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #333;
         }
 
         .title {
@@ -71,12 +83,11 @@
         }
 
         .highlight-box {
-            background: white;
+            background: #252526;
             padding: 1.5rem;
             margin: 1rem 0;
             border-radius: 8px;
-            border-left: 4px solid var(--primary-color);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #333;
         }
 
         .skills-grid {
@@ -87,44 +98,120 @@
         }
 
         .skill-item {
-            background: var(--light-bg);
+            background: #2d2d2d;
             padding: 1rem;
             border-radius: 6px;
             text-align: center;
             transition: transform 0.2s;
+            border: 1px solid #404040;
         }
 
         .skill-item:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary-color);
+            background: #333;
+        }
+
+        .skill-item h3 {
+            color: var(--function-color);
+            margin: 0.5rem 0;
+        }
+
+        .skill-item p {
+            color: var(--comment-color);
         }
 
         .cta-button {
             display: inline-block;
             padding: 0.8rem 1.5rem;
-            background: var(--success-color);
-            color: white;
+            background: var(--secondary-color);
+            color: var(--bg-color);
             text-decoration: none;
             border-radius: 4px;
-            transition: background 0.2s;
+            transition: all 0.2s;
+            font-weight: 500;
             margin-top: 1rem;
         }
 
         .cta-button:hover {
-            background: #00a844;
+            background: var(--primary-color);
+            transform: translateY(-1px);
         }
 
         #side-nav {
-            background: white;
+            background: #252526;
             border-radius: 8px;
             margin: 1rem;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #333;
+        }
+
+        /* Code-like elements */
+        .code-comment {
+            color: var(--comment-color);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .code-keyword {
+            color: var(--keyword-color);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .code-function {
+            color: var(--function-color);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Terminal-like elements */
+        .terminal-box {
+            background: #1e1e1e;
+            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid #333;
+            margin: 1rem 0;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .terminal-prompt::before {
+            content: "$ ";
+            color: var(--secondary-color);
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #424242;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4f4f4f;
         }
     </style>
     <script type="text/javascript">
         $(document).ready(function() {
             initNavTree('index.html','');
-            initResizable();
+            if ($.fn.resizable) {
+                initResizable();
+            }
         });
     </script>
 </head>
@@ -132,54 +219,60 @@
     <div id="top">
         <div id="titlearea">
             <div id="projectname">Modern C++ Calculator
-                <span id="projectnumber">1.0</span>
+                <span class="code-keyword">v1.0</span>
             </div>
-            <div id="projectbrief">Professional-Grade Scientific Calculator Implementation</div>
+            <div id="projectbrief">System-Level Development & OS Integration</div>
         </div>
         <div id="main-nav"></div>
         <div id="doc-content">
             <div class="header">
                 <div class="headertitle">
-                    <div class="title">Welcome to My Professional Portfolio</div>
+                    <div class="title">OS Development Portfolio</div>
                 </div>
             </div>
             <div class="contents">
                 <div class="textblock">
                     <div class="highlight-box">
-                        <h2>🚀 Project Highlights</h2>
-                        <p>This modern C++ calculator demonstrates my expertise in software development and commitment to writing clean, maintainable code. It showcases my ability to implement complex mathematical operations while maintaining a user-friendly interface.</p>
+                        <h2><span class="code-function">Project</span><span class="code-keyword">::</span>Highlights</h2>
+                        <p>This modern C++ calculator demonstrates expertise in system-level programming and OS integration. Built with performance and reliability in mind, it showcases low-level optimization techniques and robust error handling.</p>
+                        <div class="terminal-box">
+                            <div class="terminal-prompt">git clone https://github.com/Anon23261/First-CPP-APP.git</div>
+                        </div>
                     </div>
 
                     <div class="highlight-box">
-                        <h2>💻 Technical Skills Demonstrated</h2>
+                        <h2><span class="code-function">Technical</span><span class="code-keyword">::</span>Skills</h2>
                         <div class="skills-grid">
                             <div class="skill-item">
-                                <h3>Modern C++</h3>
-                                <p>C++17/20 Features</p>
+                                <h3>System Programming</h3>
+                                <p>Low-level C++ & OS APIs</p>
                             </div>
                             <div class="skill-item">
-                                <h3>Best Practices</h3>
-                                <p>Clean Code & SOLID</p>
+                                <h3>Memory Management</h3>
+                                <p>RAII & Smart Pointers</p>
                             </div>
                             <div class="skill-item">
-                                <h3>Testing</h3>
-                                <p>Unit & Integration</p>
+                                <h3>Concurrency</h3>
+                                <p>Thread Safety & Async</p>
                             </div>
                             <div class="skill-item">
-                                <h3>Documentation</h3>
-                                <p>Doxygen & Markdown</p>
+                                <h3>Performance</h3>
+                                <p>Optimization & Profiling</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="highlight-box">
-                        <h2>📚 Documentation Links</h2>
+                        <h2><span class="code-function">Documentation</span><span class="code-keyword">::</span>Links</h2>
                         <ul>
-                            <li><a href="d8/dbe/classCalculator.html">Calculator Class Documentation</a></li>
-                            <li><a href="files.html">Source Files</a></li>
-                            <li><a href="annotated.html">Class List</a></li>
+                            <li><span class="code-comment">// Core Implementation</span><br>
+                                <a href="d8/dbe/classCalculator.html">Calculator Class Documentation</a></li>
+                            <li><span class="code-comment">// Source Analysis</span><br>
+                                <a href="files.html">Source Files</a></li>
+                            <li><span class="code-comment">// API Reference</span><br>
+                                <a href="annotated.html">Class List</a></li>
                         </ul>
-                        <a href="https://github.com/Anon23261/First-CPP-APP" class="cta-button">View on GitHub</a>
+                        <a href="https://github.com/Anon23261/First-CPP-APP" class="cta-button">View Source on GitHub</a>
                     </div>
                 </div>
             </div>
