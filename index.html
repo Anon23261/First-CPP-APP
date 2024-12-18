@@ -10,9 +10,13 @@
     <link href="navtree.css" rel="stylesheet" type="text/css"/>
     <link href="search/search.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet">
+    <link href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+        window.jQuery = $;
+        window.$ = $;
+    </script>
     <script type="text/javascript" src="dynsections.js"></script>
     <script type="text/javascript" src="resize.js"></script>
     <script type="text/javascript" src="navtreedata.js"></script>
@@ -208,9 +212,24 @@
     </style>
     <script type="text/javascript">
         $(document).ready(function() {
+            // Ensure jQuery UI is loaded
+            if (typeof jQuery.ui === 'undefined') {
+                console.error('jQuery UI is not loaded');
+                return;
+            }
+            
+            // Initialize navigation tree
             initNavTree('index.html','');
-            if ($.fn.resizable) {
-                initResizable();
+            
+            // Initialize resizable elements
+            try {
+                if (typeof $.fn.resizable === 'function') {
+                    initResizable();
+                } else {
+                    console.error('jQuery UI resizable is not available');
+                }
+            } catch (e) {
+                console.error('Error initializing resizable:', e);
             }
         });
     </script>
