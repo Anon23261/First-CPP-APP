@@ -47,6 +47,7 @@
             border-bottom: 2px solid var(--primary-color);
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin-top: 0;
         }
 
         .hero-title {
@@ -264,6 +265,43 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #4f4f4f;
         }
+
+        /* Add these new styles */
+        .top-nav {
+            background: #252526;
+            border-bottom: 1px solid #333;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.2s;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .nav-link:hover {
+            background: #333;
+            color: var(--primary-color);
+        }
+
+        .nav-link.active {
+            background: var(--primary-color);
+            color: var(--bg-color);
+        }
+
+        /* Hide the old nav */
+        #nav-path {
+            display: none;
+        }
     </style>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -290,6 +328,13 @@
     </script>
 </head>
 <body>
+    <div class="top-nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="d8/dbe/classCalculator.html" class="nav-link">Calculator Class</a>
+        <a href="files.html" class="nav-link">Source Files</a>
+        <a href="annotated.html" class="nav-link">Class List</a>
+        <a href="https://github.com/Anon23261/First-CPP-APP" class="nav-link">GitHub</a>
+    </div>
     <div id="top">
         <div class="hero-section">
             <div class="hero-title">
