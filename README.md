@@ -206,7 +206,7 @@ Portfolio: [Your Portfolio Website](https://yourportfolio.com)
 ---
 
 <div align="center">
-  Made with ❤️ by [Your Name]
+  Made with ❤️ by ghost
   <br />
   Star ⭐ this repository if you find it helpful!
 </div>
