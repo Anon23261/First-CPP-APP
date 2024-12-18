@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>C++ Calculator Documentation</title>
-    <link href="doxygen.css" rel="stylesheet" type="text/css">
-    <script type="text/javascript" src="jquery.js"></script>
+    <link href="tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="doxygen.css" rel="stylesheet" type="text/css"/>
+    <link href="navtree.css" rel="stylesheet" type="text/css"/>
+    <link href="search/search.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
+    <script type="text/javascript" src="resize.js"></script>
+    <script type="text/javascript" src="navtreedata.js"></script>
+    <script type="text/javascript" src="navtree.js"></script>
+    <script type="text/javascript" src="search/searchdata.js"></script>
+    <script type="text/javascript" src="search/search.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            initNavTree('index.html','');
+            initResizable();
+        });
+    </script>
 </head>
 <body>
     <div id="top">
@@ -25,20 +39,33 @@
                 </tbody>
             </table>
         </div>
-        <div class="header">
-            <div class="headertitle">
-                <div class="title">C++ Calculator Documentation</div>
+        <div id="main-nav"></div>
+        <div id="nav-path" class="navpath">
+            <ul></ul>
+        </div>
+        <div id="doc-content">
+            <div class="header">
+                <div class="headertitle">
+                    <div class="title">C++ Calculator Documentation</div>
+                </div>
+            </div>
+            <div class="contents">
+                <div class="textblock">
+                    <p>Welcome to the documentation for the C++ Calculator project.</p>
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="d8/dbe/classCalculator.html">Calculator Class Documentation</a></li>
+                        <li><a href="files.html">Source Files</a></li>
+                        <li><a href="annotated.html">Class List</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="contents">
-            <div class="textblock">
-                <p>Welcome to the documentation for the C++ Calculator project.</p>
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="d8/dbe/classCalculator.html">Calculator Class Documentation</a></li>
-                    <li><a href="files.html">Source Files</a></li>
-                    <li><a href="annotated.html">Class List</a></li>
-                </ul>
+    </div>
+    <div id="side-nav" class="ui-resizable side-nav-resizable">
+        <div id="nav-tree">
+            <div id="nav-tree-contents">
+                <div id="nav-sync" class="sync"></div>
             </div>
         </div>
     </div>
